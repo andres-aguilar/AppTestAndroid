@@ -6,6 +6,9 @@
     <string name="txtEmail">Email</string>
     <string name="txtMale">Male</string>
     <string name="txtFemale">Female</string>
+    <string name="txtSexOther">Other</string>
     <string name="txtRemember">Remember me</string>
     <string name="btnSend">Send</string>
+
+    <string name="strERROR">Please, fill all fields!</string>
 </resources>
