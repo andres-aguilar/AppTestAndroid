@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppTest</string>
+    <string name="txtRegister">User register</string>
+    <string name="txtName">Name</string>
+    <string name="txtLastName">LastName</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtMale">Male</string>
+    <string name="txtFemale">Female</string>
+    <string name="txtRemember">Remember me</string>
+    <string name="btnSend">Send</string>
+</resources>
