@@ -1,5 +1,6 @@
 package com.test.yosh.apptest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -58,12 +59,16 @@ public class MainActivity extends AppCompatActivity {
                 boolean remember = cbRemember.isChecked();
 
                 if (validateForm(name, lastName, email, sex)){
-                    String message = name + " " + lastName;
+                    Intent intent = new Intent(MainActivity.this, ShowResultsActivity.class);
 
-                    Toast.makeText(getApplicationContext(), "Name: " + message, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(), "eMail: " + email, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(), "Sex: " + sex, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(), "Remember: " + remember, Toast.LENGTH_SHORT).show();
+                    // Send data
+                    intent.putExtra("name", name);
+                    intent.putExtra("lastName", lastName);
+                    intent.putExtra("email", email);
+                    intent.putExtra("sex", sex);
+                    intent.putExtra("remember", remember);
+
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.strERROR), Toast.LENGTH_SHORT).show();
                 }
